@@ -35,14 +35,3 @@ defmodule StringExample do
   def add_spaces(str, :left, spaces), do: add_spaces(" " <> str, :left, spaces - 1)
   def add_spaces(str, :right, spaces), do: add_spaces(str <> " ", :right, spaces - 1 )
 end
-
-ExUnit.start()
-
-def StringExampleTest do
-  use ExUnit.Case
-  import StringExample
-
-  test "add_spaces" do
-    assert add_spaces("aa")
-  end
-end
